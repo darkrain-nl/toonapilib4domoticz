@@ -21,9 +21,13 @@ class Configuration(metaclass=Singleton):
     STD_UNIT_SCENE = 8
     STD_UNIT_PROGRAM_STATE = 9
     STD_UNIT_MODULATION_LEVEL = 10
+    STD_UNIT_GAS_DAILY_COST = 11
+    STD_UNIT_POWER_DAILY_COST = 12
+
     STD_UNIT_SMARTPLUG_START_STATE = 100  # Begin counting for SmartPlugs State
     STD_UNIT_SMARTPLUG_START_USAGE = 120  # Begin counting for SmartPlugs Usage
     STD_UNIT_SMARTPLUG_START_KWH = 140    # Begin counting for SmartPlugs kWh
+
     STD_UNIT_LIGHT_START_STATE = 200 # Begin counting for Light State
 
     STR_UNIT_POWER = "Power usage"
@@ -36,6 +40,8 @@ class Configuration(metaclass=Singleton):
     STR_UNIT_SCENE = "Scene"
     STR_UNIT_PROGRAM_STATE = "Program state"
     STR_UNIT_MODULATION_LEVEL = "Modulation level"
+    STR_UNIT_GAS_DAILY_COST = "Daily Cost Gas"
+    STR_UNIT_POWER_DAILY_COST = "Daily Cost Power"
 
     _debug = False
 

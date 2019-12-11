@@ -15,6 +15,8 @@ from devices.smartplug import DeviceSmartPlugState
 from devices.smartplug import DeviceSmartPlugUsage
 from devices.smartplug import DeviceSmartPlugkWh
 from devices.lights import DeviceLightState
+from devices.gas_daily_cost import DeviceGasDailyCost
+from devices.power_daily_cost import DevicePowerDailyCost
 
 
 class DeviceFactory:
@@ -36,6 +38,8 @@ class DeviceFactory:
         container.add_device(DeviceThermostatState(plugin_devices, toon).create())
         container.add_device(DeviceProgramState(plugin_devices, toon).create())
         container.add_device(DeviceModulationLevel(plugin_devices, toon).create())
+        container.add_device(DeviceGasDailyCost(plugin_devices, toon).create())
+        container.add_device(DevicePowerDailyCost(plugin_devices, toon).create())
 
         # Smart Plugs
         for plug in toon.smartplugs:
